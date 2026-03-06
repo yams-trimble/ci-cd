@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sample-app
+  name: myapp
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: sample-app
+      app: myapp
   template:
     metadata:
       labels:
-        app: sample-app
+        app: myapp
     spec:
       containers:
-      - name: sample-app
+      - name: myapp
         image: yams0325/ci-cd:latest
         ports:
         - containerPort: 5000
